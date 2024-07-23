@@ -11,8 +11,12 @@ filename = sys.argv[1]
 try:
     with open(filename,"r") as file:
         content =  file.read()
-        print("Contents of File:")
-        print(content)
+        #print("Contents of File:")
+        #print(content)
 except FileNotFoundError:
     print(f"Filename: {filename} Not Found")
     sys.exit(1)
+
+#Next section's goal is to covery to lower case and then remove punctuation
+low_content  = content.lower()
+print(low_content)
